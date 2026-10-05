@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CatFans — Premium Cat Content</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0d0d12;color:#f5f5f7;font-family:Arial,Helvetica,sans-serif}
+header{height:64px;border-bottom:1px solid #292932;display:flex;align-items:center;justify-content:space-between;padding:0 7%;background:#111117;position:sticky;top:0;z-index:10}
+.logo{font-size:25px;font-weight:800;color:#55b9ff}.logo span{color:#fff}
+nav a{color:#aaa;text-decoration:none;margin-left:24px;font-size:14px}
+.btn{border:0;border-radius:22px;padding:11px 19px;font-weight:700;cursor:pointer}
+.blue{background:#55b9ff;color:#071018}.dark{background:#24242d;color:#fff}
+.hero{max-width:1100px;margin:42px auto 25px;padding:0 22px}
+.hero h1{font-size:42px;margin:0 0 8px}.hero p{color:#999;font-size:17px}
+.profile{max-width:1100px;margin:auto;padding:0 22px}
+.profile-card{background:#17171e;border:1px solid #292933;border-radius:16px;padding:24px;display:flex;gap:20px;align-items:center}
+.avatar{width:82px;height:82px;border-radius:50%;background:#f0b35a;display:flex;align-items:center;justify-content:center;font-size:45px}
+.profile h2{margin:0 0 4px}.handle{color:#8e8e99}.stats{color:#999;margin-top:9px;font-size:13px}
+.actions{margin-left:auto;display:flex;gap:10px}
+.tabs{max-width:1100px;margin:24px auto 15px;padding:0 22px;display:flex;gap:25px;border-bottom:1px solid #292932}
+.tab{padding:13px 2px;color:#999}.tab.active{color:#fff;border-bottom:2px solid #55b9ff}
+.grid{max-width:1100px;margin:auto;padding:0 22px 50px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#17171e;border:1px solid #292933;border-radius:13px;overflow:hidden}
+.pic{height:260px;display:flex;align-items:center;justify-content:center;font-size:100px;background:linear-gradient(135deg,#27202b,#15151b)}
+.card:nth-child(2) .pic{background:linear-gradient(135deg,#20302b,#15151b)}
+.card:nth-child(3) .pic{background:linear-gradient(135deg,#30271d,#15151b)}
+.info{padding:15px}.title{font-weight:700}.date{font-size:12px;color:#777;margin-top:5px}
+.locked{position:relative}.locked:after{content:"🔒  SUBSCRIBERS ONLY";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.48);font-weight:800;font-size:18px}
+.price{display:inline-block;margin-top:11px;color:#55b9ff;font-weight:700}
+footer{text-align:center;color:#666;border-top:1px solid #222;padding:28px;font-size:12px}
+@media(max-width:800px){.grid{grid-template-columns:1fr 1fr}.actions{margin-left:0}.profile-card{flex-wrap:wrap}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{font-size:32px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Cat<span>Fans</span> 🐾</div>
+  <nav><a href="#">Discover</a><a href="#">Messages</a><button class="btn blue" onclick="alert('Welcome to CatFans! 🐱')">Join</button></nav>
+</header>
+
+<section class="hero">
+  <h1>Premium cat content.</h1>
+  <p>Because apparently the internet needed a subscription service dedicated to cats sitting backwards.</p>
+</section>
+
+<section class="profile">
+  <div class="profile-card">
+    <div class="avatar">🐱</div>
+    <div>
+      <h2>Sir Wigglebottom ✓</h2>
+      <div class="handle">@sirwigglebutt</div>
+      <div class="stats">127 posts · 14.8K admirers · Professional napper</div>
+    </div>
+    <div class="actions">
+      <button class="btn dark" onclick="alert('Following Sir Wigglebottom!')">Follow</button>
+      <button class="btn blue" onclick="subscribe()">Subscribe · $4.99</button>
+    </div>
+  </div>
+</section>
+
+<div class="tabs">
+  <div class="tab active">Posts</div><div class="tab">Media</div><div class="tab">About</div>
+</div>
+
+<main class="grid">
+  <article class="card"><div class="pic">🐈</div><div class="info"><div class="title">Monday Morning Floof</div><div class="date">Today · 12 likes</div></div></article>
+  <article class="card"><div class="pic">🐈‍⬛</div><div class="info"><div class="title">The Distinguished Rear View</div><div class="date">Yesterday · 38 likes</div></div></article>
+  <article class="card"><div class="pic">😸</div><div class="info"><div class="title">Caught Mid-Sit</div><div class="date">3 days ago · 71 likes</div></div></article>
+  <article class="card"><div class="pic locked">🐾</div><div class="info"><div class="title">Exclusive Floof Drop</div><div class="price">$4.99 subscription</div></div></article>
+  <article class="card"><div class="pic locked">🐈</div><div class="info"><div class="title">Behind-the-Tail Scenes</div><div class="price">$4.99 subscription</div></div></article>
+  <article class="card"><div class="pic locked">🐱</div><div class="info"><div class="title">Ultimate Cat Butt Compilation</div><div class="price">$4.99 subscription</div></div></article>
+</main>
+
+<footer>CatFans™ — A completely ridiculous parody concept. No actual subscriptions are processed.</footer>
+
+<script>
+function subscribe(){
+  alert("😼 Subscription request received!\n\nUnfortunately, Sir Wigglebottom only accepts payment in tuna.");
+}
+</script>
+</body>
+</html>
